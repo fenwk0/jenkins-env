@@ -8,6 +8,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                ''' 
             }
         }
         stage('Test') {
